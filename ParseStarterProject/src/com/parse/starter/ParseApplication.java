@@ -20,7 +20,7 @@ public class ParseApplication extends Application {
     Parse.enableLocalDatastore(this);
 
     // Add your initialization code here
-    Parse.initialize(this);
+    Parse.initialize(this, "WqSRBU0fp8mSY42w8nHvewgif0oGkV0IUbvVdp1Z", "uSgumivn3vVgkHytIl66JvGrt03RavlfWMwA7A60");
 
 
     ParseUser.enableAutomaticUser();
