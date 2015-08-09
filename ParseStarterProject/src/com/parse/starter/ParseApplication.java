@@ -28,6 +28,9 @@ public class ParseApplication extends Application {
     // Optionally enable public read access.
     // defaultACL.setPublicReadAccess(true);
     ParseACL.setDefaultACL(defaultACL, true);
+
+
+    setContentView(R.layout.main);
   }
 
 
@@ -107,6 +110,8 @@ public class ParseApplication extends Application {
             }
         }
     });
+}
+
 
     //function for whenever user "agrees" with a report, and clicks button
     //will add 1 to the report's current support count
@@ -121,8 +126,23 @@ public class ParseApplication extends Application {
                     Log.d("Error: "+e.getMessage());
                 }
             }
-        })
+        });
     }
-  }
 
+
+    //function to display the maps, I think??
+    function displayMap() {
+
+        mv = (MapView) findViewById(R.id.mapview);
+
+        mv.setUserLocationEnabled(true);
+
+
+        //adding dummy marker
+        //can later fill in with info pulled from Parse 
+        Marker m = new Marker(mv, "title", "description", new LatLng(100, 100));
+        mv.addMarker(m);
+
+    }
 }
+  
